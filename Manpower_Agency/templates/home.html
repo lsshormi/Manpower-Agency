@@ -1,0 +1,1259 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="icon" type="image/x-icon" href="../pics/Favicon.jpeg">
+
+    <title>ManPower Agency</title>
+    <!--<link rel="stylesheet" href="../css/manpower_home.css">-->
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        @font-face {
+            font-family: last-paradise;
+            src: url("svn_last_paradise/SVN-Last Paradise.ttf");
+        }
+
+        :root {
+            --trans: all 0.3s linear;
+        }
+
+        /*header start*/
+        header {
+            background: #ffffff;
+        }
+
+        header .logo a {
+            font-size: 30px;
+            font-family: 'Gluten', cursive;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--trans);
+            padding-right: 50px;
+            color: #000;
+        }
+
+        header .logo a:hover {
+            color: #0A66C2;
+            font-weight: 600;
+        }
+
+        header .container ul li a {
+            text-decoration: none;
+            font-size: 20px;
+            color: #000000;
+            transition: var(--trans);
+            font-weight: 700;
+        }
+
+        header .container ul li a:hover {
+            color: #0A66C2;
+
+        }
+
+        header .text-end button {
+            font-weight: 700;
+
+        }
+
+        .header-below {
+            background: #0A66C2;
+            padding: 50px 0;
+        }
+
+        .header-below p {
+            color: #ffffff;
+            padding: 20px 0;
+        }
+
+        .header-below button {
+            color: #000000;
+            font-size: 20px;
+            font-weight: 600;
+            border: none;
+            background: #ffffff;
+            padding: 10px 15px;
+            border-radius: 60px;
+            transition: var(--trans);
+        }
+
+        .header-below .display-propertry {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+        .header-below .display-propertry .propertry-img {
+            text-align: right;
+
+        }
+
+        .header-below .display-propertry .propertry-img img {
+            border-radius: 50%;
+            border: 5px solid white;
+            width: 580px;
+            height: 500px;
+        }
+
+        .header-below h1 {
+            font-weight: 600;
+        }
+
+        .header-below .para {
+            font-weight: 500;
+            font-size: 18px;
+        }
+
+        .modal-body .input-type .label-img {
+            padding: 10px 15px;
+            border: 1px solid #bebebe;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .modal-body .input-type input {
+            visibility: hidden;
+        }
+
+        /*header end*/
+
+
+        /*hiring part start*/
+        .slide .carousel-inner h5,
+        p {
+            color: #6C757D;
+            font-weight: 600;
+        }
+
+        .slide .carousel-inner button {
+            margin-right: 10px;
+        }
+
+        .slide .carousel-inner button:last-child {
+            margin-right: 0;
+        }
+
+        .loggin a {
+            transition: var(--trans);
+            text-decoration: none;
+            padding: 10px 15px;
+            border: 1px solid #fff;
+            background: #ffff;
+            font-weight: 700;
+            border-radius: 50px;
+        }
+
+        .loggin a:hover {
+            color: #ffff;
+
+        }
+
+        /*hiring part end*/
+
+        /*candidates_part start*/
+        .candidates {
+            background: #F5FAF9;
+            padding: 50px 0;
+            margin-top: 90px;
+        }
+
+        .candidates_part {
+            max-width: 1350px;
+            margin: 0 auto;
+        }
+
+        .candidates_part .below-candidate {
+            text-align: center;
+            padding-bottom: 50px;
+        }
+
+        .candidates_part .below-candidate .heading {
+            font-size: 35px;
+            font-weight: 700;
+            color: #000000;
+        }
+
+        .candidates_part .below-candidate .detail {
+            font-size: 20px;
+            font-weight: 500;
+            color: #000000;
+        }
+
+        .candidates_part .candidates_part-para {
+            font-size: 18px;
+            line-height: 28px;
+            letter-spacing: 27px;
+            color: #183b56;
+            margin: 20px 0 40px;
+        }
+
+        .candidates_part .job-part {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 30px;
+            grid-template-areas: "left-part right-part";
+            margin-bottom: 250px;
+        }
+
+        .candidates_part .job-part .left-part {
+            grid-area: left-part;
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-row-gap: 30px;
+            grid-template-areas: "part1""part2""part3";
+            justify-content: right;
+        }
+
+        .candidates_part .job-part .left-part .part1 {
+            grid-area: part1;
+        }
+
+        .candidates_part .job-part .left-part .part2 {
+            grid-area: part2;
+        }
+
+        .candidates_part .job-part .left-part .part3 {
+            grid-area: part3;
+        }
+
+        .candidates_part .job-part .right-part {
+            grid-area: right-part;
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-row-gap: 30px;
+            grid-template-areas: "part4""part5""part6";
+            position: relative;
+            top: 200px;
+            justify-content: left;
+        }
+
+        .candidates_part .job-part .right-part .part4 {
+            grid-area: part4;
+        }
+
+        .candidates_part .job-part .right-part .part5 {
+            grid-area: part5;
+        }
+
+        .candidates_part .job-part .right-part .part6 {
+            grid-area: part6;
+        }
+
+
+
+
+        .candidates_part .job-part .box {
+            border: 1px solid rgb(184, 193, 202);
+            border-radius: 10px;
+            padding: 25px;
+            cursor: pointer;
+            width: 430px;
+            z-index: 1;
+            background: #ffffff;
+        }
+
+        .candidates_part .job-part .box:hover {
+            box-shadow: 1px 2px 9px rgb(112, 128, 144);
+        }
+
+        .candidates_part .job-part .box .box_head_part {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            padding: 10px 20px;
+            color: #000;
+        }
+
+        .candidates_part .job-part .box .box_main_part {
+            line-height: 40px;
+            padding: 0 20px;
+
+        }
+
+        .candidates_part .job-part .box .box_main_part .para_head {
+            font-size: 25px;
+            font-weight: 600;
+            color: #000;
+        }
+
+        .candidates_part .job-part .box .box_main_part .admin {
+            color: #f6ab37;
+            font-weight: 700;
+        }
+
+        .candidates_part .job-part .box .box_main_part .salary-part {
+            text-transform: capitalize;
+            padding-right: 30px;
+            font-weight: 600;
+        }
+
+        .candidates_part .job-part .box .box_main_part .orga {
+            font-weight: 700;
+        }
+
+        .candidates_part .job-part .box .box_main_part .number {
+            color: #f6ab37;
+        }
+
+        .candidates_part .job-part .box .box_head_part .box-img img {
+            height: 50px;
+            width: 50px;
+        }
+
+        .candidates_part .job-part .box .box_head_part .box-hour {
+            position: relative;
+            top: 10px;
+        }
+
+        .candidates_part .job-part .box .box_footer_part {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            margin-top: 50px;
+        }
+
+        .candidates_part .job-part .box .box_footer_part p {
+            color: #000000;
+            font-weight: 600;
+        }
+
+        .candidates_part .job-part .box .box_footer_part .box-location {
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 10px;
+        }
+
+        .candidates_part .job-part .box .box_footer_part .box-time {
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 10px;
+        }
+
+        .candidates_part .job-part .part6 .box1 {
+            cursor: pointer;
+            border: 2px dotted #000000;
+            border-radius: 5px;
+            height: 100%;
+            background: #F5FAF9;
+            text-align: center;
+        }
+
+        .candidates_part .job-part .part6 .box1 p {
+            text-align: center;
+        }
+
+        .candidates_part .job-part .part6 .box1 .title {
+            font-size: 50px;
+            font-weight: 700;
+            margin-top: 100px;
+            color: #000;
+        }
+
+        .candidates_part .job-part .part6 .box1 .job {
+            font-size: 25px;
+            font-weight: 600;
+            line-height: 20px;
+            color: #000000;
+        }
+
+        .candidates_part .job-part .part6 .box1 button {
+            border: 2px solid #3c9f86;
+            padding: 5px 20px;
+            color: #3c9f86;
+        }
+
+        .why-manpower {
+            background: #fffcf4;
+        }
+
+        .why-manpower .manpower-internal {
+            padding-top: 60px;
+        }
+
+        .why-manpower .manpower-internal .header-part {
+            padding-bottom: 50px;
+        }
+
+        .why-manpower .manpower-internal .header-part p {
+            font-size: 18px;
+            line-height: 28px;
+            letter-spacing: .27px;
+        }
+
+        .why-manpower .manpower-internal .details-part {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 60px;
+            grid-template-areas: "details-left-part details-right-part";
+        }
+
+        .why-manpower .manpower-internal .details-left-part {
+            grid-area: details-left-part;
+            display: grid;
+            grid-column-gap: 60px;
+            grid-row-gap: 30px;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas: "left-part1 left-part2""left-part3 left-part4";
+        }
+
+        .why-manpower .manpower-internal .details-left-part .left-part1 {
+            grid-area: left-part1;
+        }
+
+        .why-manpower .manpower-internal .details-left-part .left-part2 {
+            grid-area: left-part2;
+        }
+
+        .why-manpower .manpower-internal .details-left-part .left-part3 {
+            grid-area: left-part3;
+        }
+
+        .why-manpower .manpower-internal .details-left-part .left-part4 {
+            grid-area: left-part4;
+        }
+
+        .why-manpower .manpower-internal .details-right-part {
+            grid-area: details-right-part;
+        }
+
+        .why-manpower .manpower-internal .details-left-part h2 {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 23px;
+            letter-spacing: .3375px;
+            color: #183b56;
+            margin-top: 15px;
+        }
+
+        .why-manpower .manpower-internal .details-left-part p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+            letter-spacing: .2px;
+            color: #64626a;
+        }
+
+
+        /*remaining-part start*/
+        .remaining-part {
+            padding: 50px;
+        }
+
+        .remaining-headingpart p {
+            margin-bottom: 100px;
+            text-align: center;
+            font-size: 2.5rem;
+            color: #000;
+        }
+
+        .remaining-belowpart {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-column-gap: 50px;
+            grid-row-gap: 30px;
+            grid-template-areas: "belowpart1 belowpart2""belowpart3 belowpart4";
+        }
+
+        .remaining-belowpart .belowpart1 {
+            grid-area: belowpart1;
+        }
+
+        .remaining-belowpart .belowpart2 {
+            grid-area: belowpart2;
+        }
+
+        .remaining-belowpart .belowpart3 {
+            grid-area: belowpart3;
+        }
+
+        .remaining-belowpart .belowpart4 {
+            grid-area: belowpart4;
+        }
+
+        .remaining-belowpart .below-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .remaining-belowpart .below-box .belowpart-para {
+            width: 425px;
+        }
+
+        .remaining-belowpart .below-box .belowpart-para .below-head {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 23px;
+            letter-spacing: .3375px;
+            color: #183b56;
+        }
+
+        /*remaining-part end*/
+
+        /*footerpart start*/
+        footer {
+            background: #0A66C2;
+
+        }
+
+        footer hr {
+            color: #ffff;
+        }
+
+        footer .footer-internal {
+            max-width: 1250px;
+            margin: 0 auto;
+            padding-top: 70px;
+            padding-bottom: 30px;
+            display: grid;
+            grid-template-columns: 3fr 3fr 2fr 2fr;
+            grid-template-areas: "part1 part2 part3 part4";
+
+        }
+
+        footer h2 {
+            color: #ffff;
+            font-size: 20px;
+            padding-bottom: 30px;
+            font-weight: 700;
+        }
+
+        footer p {
+            color: #ffffff;
+            font-size: 14px;
+        }
+
+        footer .footer-internal .part1 {
+            grid-area: part1;
+        }
+
+        footer .footer-internal .part1 img {
+            width: 140px;
+            height: 40px;
+        }
+
+        footer .footer-internal .part2 {
+            grid-area: part2;
+        }
+
+        footer .footer-internal .part2 img {
+            height: 50px;
+            width: 180px;
+        }
+
+        footer .footer-internal .part3 {
+            grid-area: part3;
+        }
+
+        footer .footer-internal .part4 {
+            grid-area: part4;
+        }
+
+        footer .final-part p {
+            text-align: center;
+            color: #ffff;
+            padding-bottom: 20px;
+        }
+
+        /*footer part end*/
+
+
+        /*Responsive*/
+        @media only screen and (max-width: 1920px) {
+            .candidates_part {
+                max-width: 1350px;
+                margin: 0 auto;
+            }
+
+            footer .footer-internal {
+                max-width: 1250px;
+                margin: 0 auto;
+                padding-top: 70px;
+                padding-bottom: 30px;
+                display: grid;
+                grid-template-columns: 3fr 3fr 2fr 2fr;
+                grid-template-areas: "part1 part2 part3 part4";
+
+            }
+
+            
+        }
+
+        @media only screen and (max-width: 1200px) {
+            .why-manpower .manpower-internal .details-part {
+                display: grid;
+                grid-template-rows: 1fr 1fr;
+                grid-gap: 60px;
+                grid-template-areas: "details-left-part""details-right-part";
+            }
+            footer .footer-internal {
+                max-width: 1250px;
+                margin: 0 auto;
+                padding-top: 70px;
+                padding-bottom: 30px;
+                display: grid;
+                grid-template-columns: 3fr 3fr 2fr 2fr;
+                grid-template-areas: "part1 part2 part3 part4";
+                padding: 10px;
+            }
+
+        }
+
+        @media only screen and (max-width: 1152px) {
+            .header-below .display-propertry .propertry-img img {
+                border-radius: 50%;
+                border: 5px solid white;
+                width: 520px;
+                height: 440px;
+            }
+
+            .why-manpower .manpower-internal .details-part {
+                display: grid;
+                grid-template-rows: 1fr 1fr;
+                grid-gap: 60px;
+                grid-template-areas: "details-left-part""details-right-part";
+            }
+            footer .footer-internal {
+                max-width: 1250px;
+                margin: 0 auto;
+                padding-top: 70px;
+                padding-bottom: 30px;
+                display: grid;
+                grid-template-columns: 3fr 3fr 2fr 2fr;
+                grid-template-areas: "part1 part2 part3 part4";
+                padding: 15px;
+            }
+
+            
+        }
+
+        @media only screen and (max-width: 1024px) {
+            .header-below .display-propertry .propertry-img img {
+                border-radius: 50%;
+                border: 5px solid white;
+                width: 500px;
+                height: 420px;
+            }
+
+            .remaining-belowpart {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr 1fr 1fr;
+                grid-column-gap: 50px;
+                grid-row-gap: 30px;
+                grid-template-areas: "belowpart1""belowpart2""belowpart3""belowpart4";
+            }
+            footer .footer-internal {
+                max-width: 1250px;
+                margin: 0 auto;
+                padding-top: 70px;
+                padding-bottom: 30px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                grid-template-areas: "part1 part2" "part3 part4";
+                padding: 20px;
+            }
+
+            
+        }
+
+        @media only screen and (max-width: 964px) {
+            .header-below .display-propertry .propertry-img img {
+                border-radius: 50%;
+                border: 5px solid white;
+                width: 410px;
+                height: 330px;
+            }
+
+            .candidates_part .job-part {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr;
+                grid-gap: 30px;
+                grid-template-areas: "left-part""right-part";
+
+            }
+
+            .candidates_part .job-part .left-part {
+                grid-area: left-part;
+                display: grid;
+                grid-template-rows: 1fr 1fr 1fr;
+                grid-row-gap: 30px;
+                grid-template-areas: "part1""part2""part3";
+                justify-content: center;
+            }
+
+            .candidates_part .job-part .right-part {
+                grid-area: right-part;
+                display: grid;
+                grid-template-rows: 1fr 1fr 1fr;
+                grid-row-gap: 30px;
+                grid-template-areas: "part4""part5""part6";
+                justify-content: center;
+                position: relative;
+                top: 0;
+            }
+        }
+
+        @media only screen and (max-width: 810px) {
+            .header-below .display-propertry .propertry-img img {
+                border-radius: 50%;
+                border: 5px solid white;
+                width: 390px;
+                height: 310px;
+            }
+
+        }
+
+        @media only screen and (max-width: 768px) {
+            .why-manpower .manpower-internal .details-left-part {
+                grid-area: details-left-part;
+                display: grid;
+                grid-column-gap: 60px;
+                grid-row-gap: 30px;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr 1fr 1fr;
+                grid-template-areas: "left-part1""left-part2""left-part3""left-part4";
+            }
+
+            .why-manpower .manpower-internal .details-right-part img {
+                width: 520px;
+                height: 440px;
+            }
+        }
+
+        @media only screen and (max-width: 601px) {
+            .header-below .display-propertry .propertry-img img {
+                border-radius: 50%;
+                border: 5px solid white;
+                width: 470px;
+                height: 390px;
+            }
+
+            .why-manpower .manpower-internal .details-left-part {
+                width: 400px;
+            }
+
+            .why-manpower .manpower-internal .details-right-part img {
+                width: 470px;
+                height: 390px;
+            }
+            
+
+            
+        }
+
+        @media only screen and (max-width: 414px) {
+            .header-below .display-propertry .propertry-img img {
+                border-radius: 50%;
+                border: 5px solid white;
+                width: 400px;
+                height: 320px;
+            }
+
+            .candidates_part {
+                max-width: 350px;
+                margin: 0 auto;
+            }
+
+            .candidates_part .job-part .box {
+                max-width: 350px;
+                margin: 0 auto;
+            }
+
+            .why-manpower .manpower-internal .details-left-part {
+                width: 300px;
+            }
+
+            .candidates_part .job-part .box .box_head_part {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                padding: 10px 20px;
+                color: #000;
+            }
+
+            .why-manpower .manpower-internal {
+                max-width: 350px;
+                margin: 0 auto;
+            }
+
+            .remaining-belowpart .below-box {
+                width: 300px;
+            }
+
+            .why-manpower .manpower-internal .details-right-part img {
+                width: 450px;
+                height: 330px;
+            }
+            footer .footer-internal {
+                max-width: 1250px;
+                margin: 0 auto;
+                padding-top: 70px;
+                padding-bottom: 30px;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr 1fr 1fr;
+                grid-template-areas: "part1" "part2" "part3" "part4";
+                padding: 20px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!--NavBar part start-->
+    <!--header part start-->
+    <header class="p-3  text-white ">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <div class="logo">
+                    <a href="{% url 'home' %}" class="d-flex align-items-center mb-2 mb-lg-0  text-decoration-none">
+                        Manpower Agency
+                    </a>
+                </div>
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="{% url 'home' %}" class="nav-link px-2 ">Home</a></li>
+                    <li><a href="{% url 'jobs' %}" class="nav-link px-2 ">Browse Jobs</a></li>
+                    <li><a href="{% url 'about' %}" class="nav-link px-2 ">About</a></li>
+                    <li><a href="{% url 'contact' %}" class="nav-link px-2 ">Contact US</a></li>
+                </ul>
+
+                <div class="text-end">
+                    <div class="logout">
+                        {% if request.user.is_authenticated %}
+                        <ul class="navbar-nav mr-2 ">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Welcome {{request.user}}
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+                                </div>
+                        </ul>
+                        {% else %}
+                        <!-- <a href="{% url 'logout' %}"> Logout</a> -->
+                        <a href="{% url 'login' %}"> Login</a>
+
+                        {% endif%}
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show my-0" role="alert">
+        <strong>{{ message }}</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endfor %}
+    {% endif %}
+    <div class="header-below">
+        <div class="p-4 p-md-5  text-white rounded container ">
+            <div class="display-propertry">
+                <div class="col-md-6 px-0">
+                    <h1 class="display-4 fst-italic">One Stop Solution to Hire Talents & Grow Careers for Tomorrow</h1>
+                    <p class="lead my-3 para">Welcome to the Country’s First HR & People Management SaaS Platform -
+                        Transparent, Visible and Streamlined</p>
+                    <div class="loggin">
+                        <a href="{% url 'apply' %}" class="btn btn-outline-dark">Start Applying</a>
+                        <a href="{% url 'hire' %}" class="btn btn-outline-dark">Start Hiring</a>
+                    </div>
+                </div>
+                <div class="col-md-6 px-0 propertry-img">
+                    <img src="../pics/girl.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--header part end-->
+    <!--navbar part end-->
+
+    <!--hiring part start-->
+
+
+    <!-- Modal -->
+
+    <!--hiring part end-->
+
+
+
+    <!--candidates_part start-->
+    <div class="candidates">
+        <div class="candidates_part" id="browse">
+            <div class="below-candidate container">
+                <p class="heading">Companies want to meet qualified
+                    candidates</p>
+                <p class="detail">Manpower helps you become one in just a few clicks</p>
+            </div>
+
+            <div class="job-part">
+                <div class="left-part">
+                    <div class="part1 box">
+                        <div class="box_head_part">
+                            <div class="box-img">
+                                <img src="../pics/company_LkVoL2Q.png" alt="">
+                            </div>
+                            <div class="box-hour">
+                                <p>4 hours ago</p>
+                            </div>
+                        </div>
+                        <div class="box_main_part">
+                            <p class="para_head">Content Operations Executive</p>
+                            <p class="admin">Admin Panel</p>
+                            <p class="orga">Organization name</p>
+                            <span class="salary-part">salary</span><span class="number">25000 - 35000 Tk</span>
+                        </div>
+                        <div class="box_footer_part">
+                            <div class="box-location">
+                                <div class="location-img"><img src="../pics/marker.995d8b84.svg" alt=""></div>
+                                <div class="location-para">
+                                    <p>Dhaka</p>
+                                </div>
+                            </div>
+                            <div class="box-time">
+                                <div class="time-img"><img src="../pics/clock.4dbaf4e2.svg" alt=""></div>
+                                <div class="time-para">
+                                    <p>Full-Time</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="part2 box">
+                        <div class="box_head_part">
+                            <div class="box-img">
+                                <img src="../pics/company.png" alt="">
+                            </div>
+                            <div class="box-hour">
+                                <p>8 hours ago</p>
+                            </div>
+                        </div>
+                        <div class="box_main_part">
+                            <p class="para_head">Content Operations Executive</p>
+                            <p class="admin">Admin Panel</p>
+                            <p class="orga">Organization name</p>
+                            <span class="salary-part">salary</span><span class="number">25000 - 35000 Tk</span>
+                        </div>
+                        <div class="box_footer_part">
+                            <div class="box-location">
+                                <div class="location-img"><img src="../pics/marker.995d8b84.svg" alt=""></div>
+                                <div class="location-para">
+                                    <p>Dhaka</p>
+                                </div>
+                            </div>
+                            <div class="box-time">
+                                <div class="time-img"><img src="../pics/clock.4dbaf4e2.svg" alt=""></div>
+                                <div class="time-para">
+                                    <p>Full-Time</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="part3 box">
+                        <div class="box_head_part">
+                            <div class="box-img">
+                                <img src="../pics/company_LAYjjov.png" alt="">
+                            </div>
+                            <div class="box-hour">
+                                <p>9 hours ago</p>
+                            </div>
+                        </div>
+                        <div class="box_main_part">
+                            <p class="para_head">Content Operations Executive</p>
+                            <p class="admin">Admin Panel</p>
+                            <p class="orga">Organization name</p>
+                            <span class="salary-part">salary</span><span class="number">25000 - 35000 Tk</span>
+                        </div>
+                        <div class="box_footer_part">
+                            <div class="box-location">
+                                <div class="location-img"><img src="../pics/marker.995d8b84.svg" alt=""></div>
+                                <div class="location-para">
+                                    <p>Dhaka</p>
+                                </div>
+                            </div>
+                            <div class="box-time">
+                                <div class="time-img"><img src="../pics/clock.4dbaf4e2.svg" alt=""></div>
+                                <div class="time-para">
+                                    <p>Full-Time</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-part">
+                    <div class="part4 box">
+                        <div class="box_head_part">
+                            <div class="box-img">
+                                <img src="../pics/company_lXvXr1b.png" alt="">
+                            </div>
+                            <div class="box-hour">
+                                <p>10 hours ago</p>
+                            </div>
+                        </div>
+                        <div class="box_main_part">
+                            <p class="para_head">Content Operations Executive</p>
+                            <p class="admin">Admin Panel</p>
+                            <p class="orga">Organization name</p>
+                            <span class="salary-part">salary</span><span class="number">25000 - 35000 Tk</span>
+                        </div>
+                        <div class="box_footer_part">
+                            <div class="box-location">
+                                <div class="location-img"><img src="../pics/marker.995d8b84.svg" alt=""></div>
+                                <div class="location-para">
+                                    <p>Dhaka</p>
+                                </div>
+                            </div>
+                            <div class="box-time">
+                                <div class="time-img"><img src="../pics/clock.4dbaf4e2.svg" alt=""></div>
+                                <div class="time-para">
+                                    <p>Full-Time</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="part5 box">
+                        <div class="box_head_part">
+                            <div class="box-img">
+                                <img src="../pics/company_PwH3Ta2.png" alt="">
+                            </div>
+                            <div class="box-hour">
+                                <p>10 hours ago</p>
+                            </div>
+                        </div>
+                        <div class="box_main_part">
+                            <p class="para_head">Content Operations Executive</p>
+                            <p class="admin">Admin Panel</p>
+                            <p class="orga">Organization name</p>
+                            <span class="salary-part">salary</span><span class="number">25000 - 35000 Tk</span>
+                        </div>
+                        <div class="box_footer_part">
+                            <div class="box-location">
+                                <div class="location-img"><img src="../pics/marker.995d8b84.svg" alt=""></div>
+                                <div class="location-para">
+                                    <p>Dhaka</p>
+                                </div>
+                            </div>
+                            <div class="box-time">
+                                <div class="time-img"><img src="../pics/clock.4dbaf4e2.svg" alt=""></div>
+                                <div class="time-para">
+                                    <p>Full-Time</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="part6 box">
+                        <div class="box1">
+                            <p class="title">500+</p>
+                            <p class="job">Total Jobs Opened</p>
+                            <button type="button" class="btn ">All Jobs</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--candidates_part end-->
+
+    <!--why manpower start-->
+    <div class="why-manpower">
+        <div class="manpower-internal container">
+            <div class="header-part">
+                <h2>Why Manpower?</h2>
+                <p>Manpower is a recruiting software platform trusted by many of the best recruiting teams around the
+                    world.</p>
+            </div>
+            <div class="details-part">
+                <div class="details-left-part">
+                    <div class="left-part1">
+                        <div class="left-part-img">
+                            <img src="../pics/banner-icon.6b44ddb9.svg" alt="">
+                        </div>
+                        <div class="left-part-detail">
+                            <h2>List Open Positions</h2>
+                            <p>Build job postings that describe careers in your company to prospective applicants.</p>
+                        </div>
+                    </div>
+                    <div class="left-part2">
+                        <div class="left-part-img">
+                            <img src="../pics/wand.7aa4865e.svg" alt="">
+                        </div>
+                        <div class="left-part-detail">
+                            <h2>Experience a Smooth Recruition</h2>
+                            <p>Make the best hire with our systematic recruiting process which enables you to test the
+                                aptitude of your candidates, track their applications and schedule interviews with zero
+                                hassle, thanks to our streamlined software integration.</p>
+                        </div>
+                    </div>
+                    <div class="left-part3">
+                        <div class="left-part-img">
+                            <img src="../pics/control.1301f420.svg" alt="">
+                        </div>
+                        <div class="left-part-detail">
+                            <h2>Check Availability</h2>
+                            <p>View interviewer availability while scheduling interviews with Google Calendar and Office
+                                365.</p>
+                        </div>
+                    </div>
+                    <div class="left-part4">
+                        <div class="left-part-img">
+                            <img src="../pics/arrow.23f930fe.svg" alt="">
+                        </div>
+                        <div class="left-part-detail">
+                            <h2>Quick Sign up and Use</h2>
+                            <p>Jump right in and start hiring or applying for jobs without any lengthy procedures and
+                                have 38% more efficiency</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="details-right-part">
+                    <img src="../pics/banner-middle.44abdb2f.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--why manpower end-->
+
+    <!--remaining-part start-->
+    <div class="remaining-part">
+        <div class="container">
+            <div class="remaining-headingpart">
+                <p>Reimagining the Recruitment Industry and connect high promising talent to the fast growing employers
+                </p>
+            </div>
+            <div class="remaining-belowpart">
+                <div class="belowpart1 below-box">
+                    <div class="belowpart-img">
+                        <img src="../pics/compass.f025b68b.svg" alt="">
+                    </div>
+                    <div class="belowpart-para">
+                        <p class="below-head">
+                            Manage the full recruitment process
+                        </p>
+                        <p class="below para">Find right fit candidates, organize recruiting tasks, coordinate
+                            interviews and feedback, and gain insights to optimize recruiting.</p>
+                    </div>
+                </div>
+                <div class="belowpart2 below-box">
+                    <div class="belowpart-img">
+                        <img src="../pics/pie-chart.c49613cc.svg" alt="">
+                    </div>
+                    <div class="belowpart-para">
+                        <p class="below-head">
+                            Access multiple job portals
+                        </p>
+                        <p class="below para">Expand your candidate search by accessing multiple job portals from Kalke.
+                            You can now organize and manage your jobs on multiple job portals through Kalke instead of
+                            signing in and out of each of them, and save a ton of time and hassle!</p>
+                    </div>
+                </div>
+                <div class="belowpart3 below-box">
+                    <div class="belowpart-img">
+                        <img src="../pics/music.png" alt="">
+                    </div>
+                    <div class="belowpart-para">
+                        <p class="below-head">
+                            Make Offers
+                        </p>
+                        <p class="below para">Make and manage offers, from your recruiting software. You can configure
+                            offer fields, generate offer letters and even record candidate decisions.</p>
+                    </div>
+                </div>
+                <div class="belowpart4 below-box">
+                    <div class="belowpart-img">
+                        <img src="../pics/stars.4caf2cde.svg" alt="">
+                    </div>
+                    <div class="belowpart-para">
+                        <p class="below-head">
+                            Candidate 360
+                        </p>
+                        <p class="below para">Everything you need to know about a candidate - resume, emails,
+                            interaction history, interview scores, feedback and notes - in one place
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--remaining-part end-->
+
+    <!--footer part start-->
+    <footer>
+        <div class="footer-internal">
+            <div class="part1">
+                <h2>Our officail App</h2>
+                <p>Available on</p>
+                <div class="part1-img">
+                    <img src="../pics/play-store.png" alt="">
+                    <img src="../pics/app-store.png" alt="">
+                </div>
+            </div>
+            <div class="part2">
+                <h2>Our Partner</h2>
+                <div class="part2-img">
+                    <img src="../pics/logo-white.png" alt="">
+                </div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, nulla ipsam! Quis et ex</p>
+            </div>
+            <div class="part3">
+                <h2>Follow Us</h2>
+                <p><a href="https://www.facebook.com/" target="_blank"
+                        style="color: #ffff; text-decoration: none;">Facebook</a></p>
+                <p><a href="https://twitter.com/" target="_blank"
+                        style="color: #ffff; text-decoration: none;">Twiter</a></p>
+                <p><a href="https://www.instagram.com/" target="_blank"
+                        style="color: #ffff; text-decoration: none;">Instagram</a></p>
+                <p><a href="https://www.youtube.com/" target="_blank"
+                        style="color: #ffff; text-decoration: none;">Youtube</a></p>
+            </div>
+            <div class="part4">
+                <h2>Contact Us</h2>
+                <p>Phone:016********</p>
+                <p>Email: admin.manpower@gmail.com</p>
+            </div>
+        </div>
+        <hr>
+        <div class="final-part">
+            <p>Copyright 2021 Manpower Agency</p>
+        </div>
+    </footer>
+    <!--footer part end-->
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!--<link rel="stylesheet" href="../css/contact.css">-->
+    <link rel="icon" type="image/x-icon" href="../pics/Favicon.jpeg">
+
+    <title>Manpower Agency</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        @font-face {
+            font-family: last-paradise;
+            src: url("svn_last_paradise/SVN-Last Paradise.ttf");
+        }
+
+        :root {
+            --trans: all 0.3s linear;
+        }
+
+        /*header start*/
+        header {
+            background: #ffffff;
+        }
+
+        header .logo a {
+            font-size: 30px;
+            font-family: 'Gluten', cursive;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--trans);
+            padding-right: 50px;
+            color: #000;
+        }
+
+        header .logo a:hover {
+            color: #0A66C2;
+            font-weight: 600;
+        }
+
+        header .container ul li a {
+            text-decoration: none;
+            font-size: 20px;
+            color: #000000;
+            transition: var(--trans);
+            font-weight: 700;
+        }
+
+        header .container ul li a:hover {
+            color: #0A66C2;
+
+        }
+
+
+        /*form start*/
+        .main-part {
+            background: #F5FAF9;
+        }
+
+        main {
+            max-width: 1250px;
+            margin: 0 auto;
+            padding-bottom: 50px;
+
+        }
+
+        main p {
+            color: rgb(15, 15, 15);
+        }
+
+        main .main-head {
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        main .main-head p {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        main .main-hr {
+            max-width: 200px;
+            margin: 0 auto;
+            height: 3px;
+            margin-top: 20px;
+        }
+
+        main .main-internal {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 20px;
+            grid-template-areas: "detail form-part";
+            max-width: 1000px;
+            margin: 100px auto 0 auto;
+        }
+
+        main .main-internal .detail {
+            grid-area: detail;
+        }
+
+        main .main-internal .form-part {
+            grid-area: form-part;
+            text-align: -moz-right;
+        }
+
+        main .main-internal .form-part .col-md-6 {
+            width: 100%;
+        }
+
+        main #cf-submit .submit-btn {
+            background: #ffffff;
+            padding: 5px 15px;
+            border: 1px solid #0A66C2;
+            color: #0A66C2;
+            border-radius: 5px;
+            transition: var(--trans);
+        }
+
+        main #cf-submit .submit-btn:hover {
+            background: #0A66C2;
+            color: #ffff;
+        }
+
+        /*form end*/
+
+
+        /*footerpart start*/
+        footer {
+            background: #0A66C2;
+
+        }
+
+        footer hr {
+            color: #ffff;
+        }
+
+        footer .footer-internal {
+            max-width: 1250px;
+            margin: 0 auto;
+            padding-top: 70px;
+            padding-bottom: 30px;
+            display: grid;
+            grid-template-columns: 3fr 3fr 2fr 2fr;
+            grid-template-areas: "part1 part2 part3 part4";
+
+        }
+
+        footer h2 {
+            color: #ffff;
+            font-size: 20px;
+            padding-bottom: 30px;
+            font-weight: 700;
+        }
+
+        footer p {
+            color: #ffffff;
+            font-size: 14px;
+        }
+
+        footer .footer-internal .part1 {
+            grid-area: part1;
+        }
+
+        footer .footer-internal .part1 img {
+            width: 140px;
+            height: 40px;
+        }
+
+        footer .footer-internal .part2 {
+            grid-area: part2;
+        }
+
+        footer .footer-internal .part2 img {
+            height: 50px;
+            width: 180px;
+        }
+
+        footer .footer-internal .part3 {
+            grid-area: part3;
+        }
+
+        footer .footer-internal .part4 {
+            grid-area: part4;
+        }
+
+        footer .final-part p {
+            text-align: center;
+            color: #ffff;
+            padding-bottom: 20px;
+        }
+
+        /*footer part end*/
+
+
+        /*responsive*/
+
+        @media only screen and (max-width: 1920px) {
+            footer .footer-internal {
+                max-width: 1250px;
+                margin: 0 auto;
+                padding-top: 70px;
+                padding-bottom: 30px;
+                display: grid;
+                grid-template-columns: 3fr 3fr 2fr 2fr;
+                grid-template-areas: "part1 part2 part3 part4";
+
+            }
+        }
+
+        @media only screen and (max-width: 1200px) {
+            footer .footer-internal {
+                max-width: 1250px;
+                margin: 0 auto;
+                padding-top: 70px;
+                padding-bottom: 30px;
+                display: grid;
+                grid-template-columns: 3fr 3fr 2fr 2fr;
+                grid-template-areas: "part1 part2 part3 part4";
+                padding: 10px;
+            }
+        }
+
+        @media only screen and (max-width: 1152px) {
+            main {
+                max-width: 650px;
+                margin: 0 auto;
+                padding-bottom: 50px;
+            }
+
+            main .main-internal {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr;
+                grid-gap: 20px;
+                grid-template-areas: "detail""form-part";
+                max-width: 1000px;
+                margin: 100px auto 0 auto;
+            }
+
+            footer .footer-internal {
+                max-width: 1250px;
+                margin: 0 auto;
+                padding-top: 70px;
+                padding-bottom: 30px;
+                display: grid;
+                grid-template-columns: 3fr 3fr 2fr 2fr;
+                grid-template-areas: "part1 part2 part3 part4";
+                padding: 15px;
+            }
+        }
+
+        @media only screen and (max-width: 1024px) {
+            main {
+                max-width: 600px;
+                margin: 0 auto;
+                padding-bottom: 50px;
+            }
+
+            footer .footer-internal {
+                max-width: 1250px;
+                margin: 0 auto;
+                padding-top: 70px;
+                padding-bottom: 30px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                grid-template-areas: "part1 part2""part3 part4";
+                padding: 20px;
+            }
+        }
+
+        @media only screen and (max-width: 964px) {
+            main {
+                max-width: 550px;
+                margin: 0 auto;
+                padding-bottom: 50px;
+            }
+        }
+
+        @media only screen and (max-width: 810px) {
+            main {
+                max-width: 500px;
+                margin: 0 auto;
+                padding-bottom: 50px;
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            main {
+                max-width: 450px;
+                margin: 0 auto;
+                padding-bottom: 50px;
+            }
+        }
+
+        @media only screen and (max-width: 601px) {
+            main {
+                max-width: 380px;
+                margin: 0 auto;
+                padding-bottom: 50px;
+            }
+        }
+
+        @media only screen and (max-width: 414px) {
+            main {
+                max-width: 350px;
+                margin: 0 auto;
+                padding-bottom: 50px;
+            }
+
+            footer .footer-internal {
+                max-width: 1250px;
+                margin: 0 auto;
+                padding-top: 70px;
+                padding-bottom: 30px;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr 1fr 1fr;
+                grid-template-areas: "part1""part2""part3""part4";
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="p-3  text-white ">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <div class="logo">
+                    <a href="{% url 'home' %}" class="d-flex align-items-center mb-2 mb-lg-0  text-decoration-none">
+                        Manpower Agency
+                    </a>
+                </div>
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="{% url 'home' %}" class="nav-link px-2 ">Home</a></li>
+                    <li><a href="{% url 'jobs' %}" class="nav-link px-2 ">Browse Jobs</a></li>
+                    <li><a href="{% url 'about' %}" class="nav-link px-2 ">About</a></li>
+                    <li><a href="{% url 'contact' %}" class="nav-link px-2 ">Contact US</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show my-0" role="alert">
+        <strong>{{ message }}</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endfor %}
+    {% endif %}
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!--form part start-->
+    <div class="main-part">
+        <main>
+            <div class="main-head">
+                <h1>Get In Touch</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate facilis eveniet maiores ab maxime
+                    nam
+                    ut numquam molestiae quaerat incidunt?</p>
+            </div>
+            <hr class="main-hr">
+            <div class="main-internal">
+                <div class="detail">
+                    <div class="detail-head">
+                        <h2>Contact Details</h2>
+                    </div>
+                    <div class="detail-main">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, vero, provident, eum
+                            eligendi
+                            blanditiis ex explicabo vitae nostrum facilis asperiores dolorem illo officiis ratione vel
+                            fugiat dicta laboriosam labore adipisci.</p>
+                    </div>
+                    <div class="detail-footer">
+                        <p>Love road, Tejgaon I/A, Dhaka, Bangladesh</p>
+                        <p>Phone: +880-61-000-000</p>
+                        <p>Fax: +880-61-000-000</p>
+                        <p>Email: admin.manpower@gmail.com</p>
+                    </div>
+                </div>
+                <div class="form-part">
+                    <div class="contact-form col-md-6 ">
+                        <form id="contact-form" method="post" role="form" action="/contact">
+                            {% csrf_token %}
+                            <div class="form-group mb-4">
+                                <input type="text" placeholder="Your Name" class="form-control" name="name" id="name"
+                                    required="">
+                            </div>
+
+                            <div class="form-group mb-4">
+                                <input type="email" placeholder="Your Email" class="form-control" name="email"
+                                    id="email" required="">
+                            </div>
+
+                            <div class="form-group mb-4">
+                                <input type="text" placeholder="Subject" class="form-control" name="subject"
+                                    id="subject" required="">
+                            </div>
+
+                            <div class="form-group mb-4">
+                                <textarea rows="6" placeholder="Message" class="form-control" name="message"
+                                    id="message" required=""></textarea>
+                            </div>
+                            <div id="cf-submit">
+                                <input type="submit" id="contact-submit" class="submit-btn" value="Submit">
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <!--form part end-->
+
+
+    <!--footer part start-->
+    <footer>
+        <div class="footer-internal">
+            <div class="part1">
+                <h2>Our officail App</h2>
+                <p>Available on</p>
+                <div class="part1-img">
+                    <img src="../pics/play-store.png" alt="">
+                    <img src="../pics/app-store.png" alt="">
+                </div>
+            </div>
+            <div class="part2">
+                <h2>Our Partner</h2>
+                <div class="part2-img">
+                    <img src="../pics/logo-white.png" alt="">
+                </div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, nulla ipsam! Quis et ex</p>
+            </div>
+            <div class="part3">
+                <h2>Follow Us</h2>
+                <p><a href="https://www.facebook.com/" target="_blank"
+                        style="color: #ffff; text-decoration: none;">Facebook</a></p>
+                <p><a href="https://twitter.com/" target="_blank"
+                        style="color: #ffff; text-decoration: none;">Twiter</a></p>
+                <p><a href="https://www.instagram.com/" target="_blank"
+                        style="color: #ffff; text-decoration: none;">Instagram</a></p>
+                <p><a href="https://www.youtube.com/" target="_blank"
+                        style="color: #ffff; text-decoration: none;">Youtube</a></p>
+            </div>
+            <div class="part4">
+                <h2>Contact Us</h2>
+                <p>Phone:016********</p>
+                <p>Email: admin.manpower@gmail.com</p>
+            </div>
+        </div>
+        <hr>
+        <div class="final-part">
+            <p>Copyright 2021 Manpower Agency</p>
+        </div>
+    </footer>
+    <!--footer part end-->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

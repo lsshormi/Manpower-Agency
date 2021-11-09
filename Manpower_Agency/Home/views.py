@@ -42,8 +42,8 @@ def logoutUser(request):
 def signupUser(request):
     if request.method == 'POST' :
         sign_username = request.POST['sign_username']
-        fname = request.POST['fname']
-        lname = request.POST['lname']
+        firstName = request.POST['firstName']
+        lastName = request.POST['lastName']
         signup_email = request.POST['signup_email']
         pass1 = request.POST['pass1']
         pass2 = request.POST['pass2']
@@ -56,8 +56,8 @@ def signupUser(request):
             return redirect('home')
 
         myuser = User.objects.create_user(sign_username, signup_email, pass1)
-        myuser.first_name = fname
-        myuser.last_name = lname 
+        myuser.first_name = firstName
+        myuser.last_name = lastName 
         myuser.save()
         messages.success(request, 'Your are successfully signed in!')
         return redirect('home')
